@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
@@ -124,10 +128,8 @@ ul {
 }
 .hero {
   background-color: #2e2f42;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .hero-title {
   margin-bottom: 48px;
@@ -138,6 +140,7 @@ ul {
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  max-width: 496px;
 }
 .container-hero {
   display: flex;
@@ -168,6 +171,9 @@ ul {
 .feature-list {
   display: flex;
   gap: 24px;
+}
+.feature-item {
+  width: calc((100% - (24px * 3)) / 4);
 }
 .feature-item-title {
   margin-bottom: 8px;
@@ -213,9 +219,12 @@ ul {
 }
 
 .team-item {
+  width: calc((100% - (24px * 3)) / 4);
   background-color: #fff;
-  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  box-shadow:
+    0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 2px 1px 0 rgba(46, 47, 66, 0.08);
   border-radius: 0 0 4px 4px;
 }
 
@@ -232,8 +241,7 @@ ul {
   text-align: center;
 }
 .team-worker-info {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 16px;
 }
 /*! Portfolio */
 .portfolio-title {
@@ -248,9 +256,21 @@ ul {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
   justify-content: center;
 }
+.portfolio-item {
+  width: calc((100%- (24px * 2)) / 3);
+  margin-right: 24px;
+}
+
+.portfolio-item:nth-child(n + 4) {
+  margin-top: 48px;
+}
+
+.portfolio-item:nth-child(3n) {
+  margin-right: 0;
+}
+
 .portfolio-item-info {
   padding: 32px 16px;
   border-right: 1px solid #e7e9fc;
@@ -274,9 +294,11 @@ ul {
   letter-spacing: 0.02em;
 }
 /*footer*/
-.footer-container {
+.footer {
+  background-color: #2e2f42;
   padding: 100px 15px;
 }
+
 .footer-logo .logo-part {
   color: #f4f4fd;
 }
@@ -284,9 +306,7 @@ ul {
   display: inline-block;
   margin-bottom: 17.5px;
 }
-footer {
-  background-color: #2e2f42;
-}
+
 .footer-text {
   color: #f4f4fd;
   font-size: 16px;
