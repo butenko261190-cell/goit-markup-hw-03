@@ -259,7 +259,7 @@ ul {
   justify-content: center;
 }
 .portfolio-item {
-  width: calc((100%- (24px * 2)) / 3);
+  width: calc((100% - (24px * 2)) / 3);
   margin-right: 24px;
 }
 
@@ -296,7 +296,7 @@ ul {
 /*footer*/
 .footer {
   background-color: #2e2f42;
-  padding: 100px 15px;
+  padding: 100px 0;
 }
 
 .footer-logo .logo-part {
@@ -304,7 +304,7 @@ ul {
 }
 .footer-logo {
   display: inline-block;
-  margin-bottom: 17.5px;
+  margin-bottom: 16px;
 }
 
 .footer-text {
